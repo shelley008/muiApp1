@@ -1,0 +1,51 @@
+.confNav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:100px
+}
+.confNav .submenu{
+	margin:30px 20px 0 20px;
+	border-radius: 10px;
+	background: #fff;
+	padding:10px 0;
+	box-shadow: #ccc 0 0 5px;
+	cursor: pointer;
+	display: flex;
+	flex: row;
+	justify-content: center;
+	align-items: center;
+}
+.submenu .icon {
+	margin:0 20px 0 30px;
+	width:60px;
+}
+.submenu .icon img{
+	width:60px;
+	height:60px;
+	border-radius: 50%;
+}
+.submenu dl{
+	flex:1;
+	font-weight: normal;
+}
+*{
+	margin:0;
+	padding:0;
+}
+.submenu dl dd{
+	font-weight: normal;
+	font-size: 16px;
+	color: #919191;
+}
+
+
+/* 预约会议 */
+
+.confScheduleMain{
+	margin:10px;
+	border-radius:10px;
+}
+.confScheduleMain:before,.confScheduleMain:after{
+	display: none;
+}

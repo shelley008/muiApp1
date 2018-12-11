@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">会议</h1>
+		</header>
+		<ul class="mui-content confNav">
+ 
+				
+				<li class="submenu"  @tap="openConfSchedule()">
+					<div class="icon"><img src="../img/a2.jpg"></div>
+					<dl>
+						<dt>我的会议室</dt>
+						<dd>号码：12345678901</dd>
+					</dl>
+				</li>
+				
+				<li class="submenu">
+					<div class="icon"><img src="../img/a2.jpg" ></div>
+					<dl>
+						<dt>预约会议</dt>
+						<dd>开始预约您的会议</dd>
+					</dl>
+				</li>
+		</ul>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var subpage_style = {
+				top:'0px',
+				bottom:'0px'
+			};
+			
+			var subpage_style2 = {
+				top:'0px',
+				bottom:'0px',
+				width:'100%',
+				height:'100%'
+			};
+			
+			
+			function openConfSchedule() {
+				console.log("----------------------------")
+				alert(112)
+			}
+			
+			mui.plusReady(function(){
+				//创建webview子页
+				var sub = plus.webview.create('confSchedule.html','confSchedule.html',subpage_style);
+				//获取当前视窗
+				var self = plus.webview.currentWebview();
+// 				mui('.confNav').on('tap', 'a', function(e) {
+// 					//获取href属性
+// 					var dom = this.getAttribute('href');
+// 					
+// 					//打开子页面   
+// 					this.setAttribute("style","top:0px")
+// 					//显示目标选项卡
+// 					//self.append(sub);
+// 					//plus.webview.show(sub)
+// 					console.log('dom1:'+dom);
+// 					
+// 					//新开窗体
+// 					if(dom == 'confSchedule.html'){
+// 						mui.openWindow({
+// 							url:dom,
+// 							id:dom,
+// 							styles:subpage_style2,
+// 							extras:{
+// 								name:'shelley',
+// 								roomId:'123456789'
+// 							}
+// 						})
+// 					}else{
+// 						console.log('sorry')
+// 					}
+// 					
+// 				}); 
+			})
+		</script>
+	</body>
+
+</html>
